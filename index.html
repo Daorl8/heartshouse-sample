@@ -16,7 +16,7 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="theme-color" content="#F8F4ED" />
+<meta name="theme-color" content="#FFFFFF" />
 <link rel="icon" href="favicon.png" type="image/png" />
 <link rel="preload" href="hh-pretendard.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="hh-myeongjo.woff2" as="font" type="font/woff2" crossorigin />
@@ -42,8 +42,8 @@
 
 :root{
   /* v0.2 편지지: 미색 종이 + 원목 브라운 글자 (매장 원목 · 벽돌 근거 웜 예외) */
-  --paper:#F8F4ED;
-  --paper-2:#F0E9DF;
+  --paper:#FFFFFF;       /* v0.2.1 기본 바탕 흰색 */
+  --paper-2:#F8F4ED;     /* 띠 = 아이보리 (v0.2의 미색) */
   --ink:#3A2A20;         /* 12.5:1 */
   --soft:#6E5F53;        /* 5.6:1 · 띠 위 5.1:1 */
   --line:#E0D5C7;
@@ -81,7 +81,7 @@ h1,h2,h3,p{ margin:0; }
 @media (hover:hover){ .btn:not(.fill):hover{ background:var(--ink); color:var(--paper); } .btn.fill:hover{ background:#1F160F; border-color:#1F160F; } }
 
 /* 헤더 */
-.site-head{ position:sticky; top:0; z-index:50; background:rgba(248,244,237,.96); border-bottom:1px solid var(--line); }
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); }
 .site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:66px; }
 @media (min-width:900px){ .site-head .wrap{ display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); gap:24px; } .head-cta{ justify-self:end; } }
 .brand img{ height:44px; width:auto; }
@@ -108,7 +108,7 @@ h1,h2,h3,p{ margin:0; }
 /* 편지 */
 .letter .wrap{ display:grid; gap:52px; align-items:center; }
 @media (min-width:900px){ .letter .wrap{ grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:80px; } }
-.paper{ margin-top:30px; padding:26px 26px 18px; background:#FFFDF9; border:1px solid var(--line); border-radius:var(--r); box-shadow:0 1px 0 var(--line); }
+.paper{ margin-top:30px; padding:26px 26px 18px; background:#FFFFFF; border:1px solid var(--line); border-radius:var(--r); box-shadow:0 1px 0 var(--line); }
 .paper .to{ font-family:var(--serif); color:var(--soft); }
 .paper p.body{ margin-top:6px; font-family:var(--serif); font-size:1.12rem; line-height:2.3; background:repeating-linear-gradient(transparent 0 calc(2.3em - 1px), var(--line) calc(2.3em - 1px) 2.3em); }
 .paper .from{ margin-top:12px; text-align:right; font-family:var(--serif); color:var(--soft); }
@@ -262,7 +262,7 @@ h1,h2,h3,p{ margin:0; }
     </div>
   </section>
 
-  <section class="sec visit" id="visit" aria-labelledby="visit-h">
+  <section class="sec alt visit" id="visit" aria-labelledby="visit-h">
     <div class="wrap">
       <div class="reveal">
         <p class="label"><svg aria-hidden="true"><use href="#env"/></svg>Visit</p>
