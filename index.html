@@ -149,6 +149,8 @@ h1,h2,h3,p{ margin:0; }
 .visit-right{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
 .visit-right img{ width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--r); }
 .map{ width:100%; height:100%; min-height:260px; border:0; border-radius:var(--r); background:var(--paper-2); }
+/* 모바일: 간판 사진 위 · 지도 아래 각각 전체 폭 (2열이면 지도 160px로 좁아짐) */
+@media (max-width:899px){ .visit-right{ grid-template-columns:minmax(0,1fr); } .visit-right img{ aspect-ratio:4/3; } .map{ height:auto; aspect-ratio:4/3; min-height:0; } }
 
 /* 푸터 */
 .foot{ background:var(--wood); color:var(--wood-soft); text-align:center; padding:64px 0 calc(110px + env(safe-area-inset-bottom)); font-size:.88rem; }
@@ -181,7 +183,7 @@ h1,h2,h3,p{ margin:0; }
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="하츠하우스 처음으로"><img src="hh-logo.webp" alt="HEARTS HOUSE" width="408" height="314" /></a>
-    <nav class="nav" aria-label="주요 메뉴"><a href="#letter">편지</a><a href="#menu">메뉴</a><a href="#house">공간</a><a href="#visit">오시는 길</a></nav>
+    <nav class="nav" aria-label="주요 메뉴"><a href="#letter">편지</a><a href="#menu">커피·디저트</a><a href="#house">공간</a><a href="#visit">오시는 길</a></nav>
     <a class="btn fill head-cta" href="https://map.naver.com/p/entry/place/1304957578" target="_blank" rel="noopener">네이버 길찾기</a>
   </div>
 </header>
@@ -268,9 +270,9 @@ h1,h2,h3,p{ margin:0; }
         <p class="label"><svg aria-hidden="true"><use href="#env"/></svg>Visit</p>
         <h2 id="visit-h" class="h2">오시는 길</h2>
         <dl class="info">
-          <div><dt>주소</dt><dd><b>서울 성동구 송정6길 8 2층</b><small>포스터 간판 옆 골목</small></dd></div>
-          <div><dt>지하철</dt><dd>어린이대공원역 5번 출구 도보 10분<small>성동세무서에서 도보 3분</small></dd></div>
-          <div><dt>버스</dt><dd>성수역 4번 출구 성동10번 마을버스 → 왕약국 하차<small>성수역 2번 출구 도보 15분</small></dd></div>
+          <div><dt>주소</dt><dd><b>서울 성동구 송정6길 8 2층</b><small>포스터 간판 옆 골목 · 성동세무서에서 도보 3분</small></dd></div>
+          <div><dt>지하철</dt><dd>어린이대공원역 5번 출구 도보 10분<small>성수역 2번 출구 도보 15분</small></dd></div>
+          <div><dt>버스</dt><dd>성수역 4번 출구 → 성동10번 마을버스 → 왕약국 하차</dd></div>
           <div><dt>영업</dt><dd><b>12:00 ~ 20:00</b> · 라스트오더 19:30<small>매주 화요일 정기휴무</small></dd></div>
           <div><dt>반려견</dt><dd>함께 방문할 수 있어요</dd></div>
           <div><dt>문의</dt><dd>인스타그램 DM</dd></div>
